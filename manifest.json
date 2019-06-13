@@ -1,0 +1,23 @@
+{
+  "name": "NBA Analytics",
+  "version": "1.0",
+  "description": "Enhance your viewing experience!",
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "*://*.nba.com/",
+    "*://nbanlds245vod.akamaized.net/"
+  ],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://watch.nba.com/*"],
+      "css": [],
+      "js": ["content.js"]
+    }
+  ],
+  "manifest_version": 2
+}
